@@ -1,0 +1,7 @@
+RewriteEngine On
+
+#No permite cargar directorios en el servidor web
+Options All -Indexes
+
+#Utilizar url amigables con php, separa con / las url
+RewriteRule ^([a-zA-Z0-9/ñÑ-]+)$ index.php?views=$1
