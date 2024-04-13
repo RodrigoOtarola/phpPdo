@@ -88,12 +88,38 @@ class mainModel
         $cadena=str_ireplace(";","",$cadena);
         $cadena=str_ireplace("::","",$cadena);
 
-        //trim: Elimina espacios dentro de la cadena
-        $cadena=trim($cadena);
-
         //Elimina cadenas invertidas
         $cadena=stripcslashes($cadena);
 
+        //trim: Elimina espacios dentro de la cadena
+        $cadena=trim($cadena);
+
         return $cadena;
     }
+
+    /** Funcion para verificar datos */
+    protected static function verificar_datos($filtro,$cadena){
+        if(preg_match("/^".$filtro."$/",$cadena)){
+            //Cuando no tiene errores
+            return false;
+        }else{
+            //Retornamos true cuando hay errores
+            return true;
+        }
+    }
+
+    /** Fución verificar fecha */
+    protected static function verificar_fecha($fecha){
+        //explode para separar fecha con -
+        $valores=explode('-',$fecha);
+
+        //Función para verificar fecha, recibe mes, dia y año
+        if (count($valores) == 3 && checkdate($valores[0],$valores[1],$valores[2])){
+            return false;
+        }else{
+            return true;
+        }
+
+    }
+
 }
