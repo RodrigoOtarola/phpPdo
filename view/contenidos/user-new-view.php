@@ -1,9 +1,9 @@
 <?php
-	if($_SESSION['privilegio_spm']!=1){
-		echo $lc->forzar_cierre_sesion_controlador();
-		exit();
-	}
-?>
+//	if($_SESSION['privilegio_spm']!=1){
+//		echo $lc->forzar_cierre_sesion_controlador();
+//		exit();
+//	}
+//?>
 <div class="full-box page-header">
 	<h3 class="text-left">
 		<i class="fas fa-plus fa-fw"></i> &nbsp; NUEVO USUARIO
@@ -28,7 +28,8 @@
 </div>
 
 <div class="container-fluid">
-	<form class="form-neon FormularioAjax" action="<?php echo SERVERURL; ?>ajax/usuarioAjax.php" method="POST" data-form="save" autocomplete="off">
+<!--    action="<?php echo SERVERURL; ?>ajax/usuarioAjax.php"-->
+	<form class="form-neon FormularioAjax"  method="POST" data-form="save" autocomplete="off">
 		<fieldset>
 			<legend><i class="far fa-address-card"></i> &nbsp; Información personal</legend>
 			<div class="container-fluid">
