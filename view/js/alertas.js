@@ -47,7 +47,7 @@ function enviar_formulario_ajax(e) {
     Swal.fire({
         title: '¿Estas seguro?',
         text: texto_alerta,
-        icon: 'question',
+        icon: "question",
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
