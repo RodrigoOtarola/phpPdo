@@ -9,8 +9,8 @@ class usuarioModelo extends mainModel
     protected static function agregar_usuario_modelo($datos)
     {
         $sql = mainModel::conectar()
-            ->prepare("INSERT INTO usuario(usuario_dni,usuario_nombre,usuario_nombre, usuario_telefono,usuario_direccion,usuario_email,usuario_usuario,usuario_clave,usuario_estado,usuario_privilegio) 
-                            VALUE(:DNI,:Nombre,:Apellido,:Telefono,:Direccion,:Email,:Usuario,:Clave,:Estado) ");
+            ->prepare("INSERT INTO usuario(usuario_dni,usuario_nombre,usuario_apellido,usuario_telefono,usuario_direccion,usuario_email,usuario_usuario,usuario_clave,usuario_estado,usuario_privilegio) 
+                            VALUE(:DNI,:Nombre,:Apellido,:Telefono,:Direccion,:Email,:Usuario,:Clave,:Estado,:Privilegio) ");
 
         //Para sustituir marcadores
         $sql->bindParam(":DNI", $datos['DNI']);

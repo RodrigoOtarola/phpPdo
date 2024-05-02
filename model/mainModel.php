@@ -14,7 +14,7 @@ class mainModel
     {
         $conexion = new PDO(SGBD, USER, PASS);
 
-        $conexion->exec("SET CHARACTER utf8");
+        $conexion->exec("SET NAMES utf8");
 
         return $conexion;
     }
