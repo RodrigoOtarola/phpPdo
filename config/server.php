@@ -6,7 +6,7 @@ const USER="root";
 const PASS="";
 
 //Para conectarse a la base de datos
-const SGBD="mysql:host=".SERVER.";dbname=".DB;
+const SGBD='mysql:host='.SERVER.';dbname='.DB;
 
 //Encriptación
 const METHOD="AES-256-CBC";
